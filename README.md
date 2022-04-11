@@ -8,11 +8,12 @@ Required dependencies can be found in `setup.py`.
 
 # Running an experiment
 
-
 `python run.py --intrinsic acb --env breakout`\
 runs an experiment using ACB in the Atari game Breakout.
 
 `python run.py --intrinsic rnd --env seaquest --extrinsic`\
 runs an experiment using RND in the atari game Seaquest. The `extrinsic` flag allows the agent to be trained jointly on intrinsic and extrinsic rewards; by default only the specified intrinsic rewards are used.
+
+Other arguments have their defaults assigned to what was used in our paper.
 
 
