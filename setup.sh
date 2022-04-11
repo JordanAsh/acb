@@ -9,8 +9,7 @@ sudo apt-get install -y python-dill
 sudo apt-get install -y libharfbuzz-dev
 sudo apt-get update && apt-get install -y python3-opencv
 sudo apt-get install ffmpeg libsm6 libxext6  -y
-
-python -m pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html --user
+python -m pip  install torch==1.10.0+cu113 torchvision==0.11.1+cu113 torchaudio==0.10.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html --user
 python -m pip install --upgrade pip --user
 python -m pip install opencv-python --user
 python -m pip install progressbar2 --user
@@ -24,13 +23,13 @@ python -m pip install tensorflow-gpu --user
 python -m pip install pandas --user
 python -m pip install Pillow --user
 python -m pip install -e . --user
-
-
 python -m pip install PyHamcrest --user
 python -m pip install gym --user
 python -m pip install atari_py==0.2.6 --user
-python -m pip install scikit-image --user 
-python -m pip install sklearn --user 
+python -m pip install gym[atari] --user
+python -m pip install gym[accept-rom-license] --user
+python -m pip install scikit-image --user
+python -m pip install sklearn --user
 python -m pip install -U matplotlib --user
 python -m pip install tensorboardX --user
 python -m pip install gym_super_mario_bros --user
