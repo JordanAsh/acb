@@ -104,7 +104,7 @@ def main():
         use_gae=use_gae,
         use_noisy_net=use_noisy_net,
         intrinsic=args.intrinsic,
-        extrinsic=bool(args.extrinsic),
+        extrinsic=args.extrinsic,
         numAux=args.numAux,
         var=args.var,
         lr=args.lr,
@@ -354,7 +354,7 @@ if __name__ == '__main__':
     parser.add_argument('--dummy', help='dummy input, useful for running multiple iterates', type=int, default=0)
     parser.add_argument('--intrinsic', help='rnd or acb', type=str, default='none')
     parser.add_argument('--env', help='', type=str, default='breakout')
-    parser.add_argument('--extrinsic', help='use extrinsic', type=int, default=0)
+    parser.add_argument('--extrinsic', help='use extrinsic signal?', action='store_true')
     parser.add_argument('--burnIn', help='how long to let bonus ''burn in'' before use', type=int, default=0)
     parser.add_argument('--lr', help='learning rate', type=float, default=1e-4)
     parser.add_argument('--initPull', help='aux weight regularization penalty (towards initialization)', type=float, default=1e3)
